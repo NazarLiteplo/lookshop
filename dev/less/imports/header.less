@@ -2,23 +2,65 @@
 	background-color: #fff;
 	&-top{
 		background-color: #000;
+		text-transform: uppercase;
 	}
 	&-pad_top{
-		padding-top: 37px;
+		// padding-top: 37px;
+		// padding-bottom: 33px;
+		text-align: center;
+		@media screen and (min-width: @width-tablet){
+			padding: 0;
+			font-size: 0.6875rem;
+			text-align: right;
+		}
+		.dropdown{
+				.dropdown-icon(#fff);
+			}
 	}
 	&-box{
 		.inline-block;
 		border-left: 2px solid #444;
 		color: #fff;
+		padding-top: 37px;
+		padding-bottom: 33px;
+		padding: 37px 30px 30px 33px;
+		line-height: 40px;
+
+		@media screen and (min-width: @width-tablet){
+			padding:10px;
+			text-align: left;
+			line-height: 13px;
+		}
+		& .icon{
+			padding-right: 10px;
+
+		}
+			
 		&:first-child{
 			border-left: none;
+			margin-right: 30px; 
+			@media screen and (min-width: @width-tablet){
+				margin-right: 10px; 
+			}
+			// width: 20%;
 		}
 	}
 	.custom{
 		.text-center;
+		padding: 37px 0;
 		text-transform: uppercase;
 		color: #838383;
-		
+		margin: 0;
+		background-color: #fafafa;
+		@media screen and (min-width: @width-tablet){			
+			background-color: #000;
+			padding: 10px;
+			color: #fff;
+			height: 100%;
+			text-align: left;
+
+		}
+
 	}
 	.logo{
 		font-family: "Tribuchet MS", sans-serif;
@@ -40,6 +82,7 @@
 		color: #949393;
 		line-height: 95px;
 		float: right;
+		padding: 21px 0;
 		&-list{
 			display: none;
 			border: 1px solid #d6d6d6;
