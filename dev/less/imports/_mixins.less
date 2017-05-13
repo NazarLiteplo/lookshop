@@ -1,0 +1,38 @@
+.grid-univers(@name, @count, @i:1) when(@i <= @count){
+	.@{name}@{i}{
+		width: (100% / @count) * @i;
+	}
+	.grid-univers(@name, @count, @i+1);
+}
+.inline-block(@va:top){
+	display: inline-block;
+	vertical-align: @va;
+}
+
+.header-with-pad(){
+	padding: 35px 0;
+	@media screen and (min-width: @width-tablet) {
+		padding: 10px 0;
+	}
+}
+
+.dropdown-icon(@color){
+	position: relative;
+	padding-right: 30px;
+	&:after{
+		content: '';
+		position: absolute;
+	 	top: 50%;
+		transform: translateY(-25%);
+		right: 0;
+		border: 10px solid transparent;
+		border-top-color: @color;
+		@media screen and (min-width: @width-tablet){
+			border: 4px solid transparent;
+			border-top-color: @color;
+		}
+	}
+		@media screen and (min-width: @width-tablet){
+			padding-right: 15px;
+		}
+}
